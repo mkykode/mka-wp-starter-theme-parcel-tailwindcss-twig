@@ -1,0 +1,26 @@
+{
+  "name": "site",
+  "version": "1.0.0",
+  "description": "site Wordpress theme",
+  "main": "./src/index.js",
+  "author": "Jull Weber <jull@monkeykodeagency.com>",
+  "scripts": {
+    "dev": "parcel ./src/site.js --hmr-hostname localhost",
+    "build": "parcel build ./src/site.js"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-eslint": "^10.0.1",
+    "babel-preset-env": "^1.7.0",
+    "eslint": "^5.6.1",
+    "eslint-config-prettier": "^3.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.1",
+    "eslint-plugin-react": "^7.11.1",
+    "parcel-bundler": "^1.10.1",
+    "prettier": "^1.14.3",
+    "sass": "^1.14.1",
+    "tailwindcss": "^0.6.6"
+  }
+}
