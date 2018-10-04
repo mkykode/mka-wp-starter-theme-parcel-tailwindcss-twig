@@ -14,7 +14,7 @@ class Menus {
 	 * Constructor.
 	 */
 	public function __construct() {
-		$this->menu_locations;
+		$this->menu_locations();
 	}
 
 	/**
