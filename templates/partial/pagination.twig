@@ -1,13 +1,13 @@
 {% if posts.pagination.pages is not empty %}
-    <nav class="pagination-block">
-        <ul class="pagination">
-            {% if pagination.pages|first and pagination.pages|first.current != true %}
+    <nav>
+        <ul>
+            {% if pagination.pages | first and pagination.pages | first.current != true %}
                 <li class="first btn">
                     <a href="{{ pagination.pages|first.link }}">First</a>
                 </li>
             {% else %}
                 <li class="first btn disabled">
-                    <button disabled>First</button>
+                    <button disabled="disabled">First</button>
                 </li>
             {% endif %}
 
@@ -17,7 +17,7 @@
                 </li>
             {% else %}
                 <li class="prev btn disabled">
-                    <button disabled>Previous</button>
+                    <button disabled="disabled">Previous</button>
                 </li>
             {% endif %}
 
@@ -41,18 +41,18 @@
                 </li>
             {% else %}
                 <li class="next btn disabled">
-                    <button disabled>
+                    <button disabled="disabled">
                         Next
                     </button>
                 </li>
             {% endif %}
-            {% if pagination.pages|last and pagination.pages|last.current != true %}
+            {% if pagination.pages | last and pagination.pages | last.current != true %}
                 <li class="last btn">
                     <a href="{{ pagination.pages|last.link }}">Last</a>
                 </li>
             {% else %}
                 <li class="last btn disabled">
-                    <button disabled>Last</button>
+                    <button disabled="disabled">Last</button>
                 </li>
             {% endif %}
         </ul>
