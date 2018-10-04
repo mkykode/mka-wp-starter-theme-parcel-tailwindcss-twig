@@ -22,11 +22,11 @@ class Site extends Timber\Site {
 	 * Constructor;
 	 */
 	public function __construct() {
-		add_action( 'after_setup_theme', new Setup\Supports() );
-		add_action( 'after_setup_theme', new Setup\Menus() );
+		add_action( 'customizer_register', new Site\Customizer\Customizations() );
+		add_action( 'after_setup_theme', [ new Setup\Supports(), 'theme_supports' ] );
+		add_action( 'after_setup_theme', [ new Setup\Menus(), 'menu_locations' ] );
+		add_action( 'wp_enqueue_scripts', [ new Setup\Enqueue(), 'enqueue_scripts' ] );
 		add_filter( 'timber_context', [ $this, 'add_to_context' ] );
-		add_action( 'wp_enqueue_scripts', new Setup\Enqueue() );
-		add_action( 'customizer_register', new Customizer\Customizations() );
 
 		parent::__construct();
 	}

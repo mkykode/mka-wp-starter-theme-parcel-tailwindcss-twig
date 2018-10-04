@@ -10,13 +10,7 @@ namespace Site\Setup;
  * Supports
  */
 class Supports {
-	/**
-	 * Constructor.
-	 */
-	public function __construct() {
-		$this->theme_supports();
 
-	}
 	/**
 	 * Theme Supports file.
 	 *
@@ -38,8 +32,8 @@ class Supports {
 		add_theme_support(
 			'custom-logo',
 			array(
-				// 'width'       => 93,
-				// 'height'      => 35,
+				'width'       => 93,
+				'height'      => 35,
 				'flex-width'  => true,
 				'flex-height' => true,
 			)
@@ -50,3 +44,4 @@ class Supports {
 	}
 
 }
+

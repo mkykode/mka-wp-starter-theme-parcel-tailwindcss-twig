@@ -24,7 +24,7 @@ class Customizations {
 	 */
 	public function customizations() {
 
-		// If you want to Use Kirki, otherwise add your wp_customize here.
+		// If you want to Use Kirki, otherwise add your wp_customize
 		// new Kirki\Setup();
 	}
 }

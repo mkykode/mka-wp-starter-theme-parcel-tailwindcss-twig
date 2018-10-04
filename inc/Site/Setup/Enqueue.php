@@ -11,12 +11,6 @@ namespace Site\Setup;
  */
 class Enqueue {
 	/**
-	 * Constructor
-	 */
-	public function __construct() {
-		$this->enqueue_scripts();
-	}
-	/**
 	 * Enqueue scripts/
 	 *
 	 * @return void
