@@ -30,8 +30,8 @@ if ( ! class_exists( 'Timber' ) ) {
 Timber::$dirname = array( 'templates' );
 
 /**
- * Import main class file.
+ * Autoload.
  */
-require_once 'inc/Site.php';
+require_once 'inc/autoload.php';
 
 new Site();
