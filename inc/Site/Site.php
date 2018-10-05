@@ -22,8 +22,9 @@ class Site extends Timber\Site {
 	 * Constructor;
 	 */
 	public function __construct() {
-		add_action( 'customizer_register', new Site\Customizer\Customizations() );
-		add_action( 'after_setup_theme', [ new Setup\Supports(), 'theme_supports' ] );
+		// Uncomment if using Kirki. It can't be added through a hook.
+		// new Customizer\Kirki\Setup(); 
+		add_action( 'customize_register', [ new Site\Customizer\Customizations(), 'register' ], 970 );
 		add_action( 'after_setup_theme', [ new Setup\Menus(), 'menu_locations' ] );
 		add_action( 'wp_enqueue_scripts', [ new Setup\Enqueue(), 'enqueue_scripts' ] );
 		add_filter( 'timber_context', [ $this, 'add_to_context' ] );

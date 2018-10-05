@@ -18,7 +18,7 @@ class Menus {
 	public function menu_locations() {
 		register_nav_menus(
 			array(
-				'footer' => esc_html__( 'Footer', \Site::$text_domain ),
+				'primary' => esc_html__( 'Primary', \Site::$text_domain ),
 			)
 		);
 	}
